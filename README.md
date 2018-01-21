@@ -1,7 +1,7 @@
 # Teste-Afilio
 Repositório da minha solução do teste pedido como requisito de vaga para Machine Learning
 
-## O resultado está em formato jupyter notebook e o mesmo em html na pasta files
+## O resultado está em formato jupyter notebook e o mesmo em html na pasta AFILIO
 
 - A solução está organizada em dois arquivos: Análise e Respostas
 - Todas as informações, código, explicação estão nos arquivos
