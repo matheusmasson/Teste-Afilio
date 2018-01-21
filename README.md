@@ -8,6 +8,6 @@ Repositório da minha solução do teste pedido como requisito de vaga para Mach
 
 ## Esse teste utiliza o dataset público de doações eleitorais de 2014 no Brasil
 
-- Em conjunto estão também a versão que utilizei do dataset e um banco sqlite utilizado na solução
+- Para reprodução do teste é necessário obter o dataset e gerar um banco de dados sqlite que é gerado no arquivo Análise, são muito grandes para o github por isso não pude adicionar.
 
 ## OBS: Ainda em desenvolvimento
