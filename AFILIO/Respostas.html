@@ -11779,9 +11779,32 @@ div#notebook {
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Respostas:">Respostas:<a class="anchor-link" href="#Respostas:">&#182;</a></h1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Sobre: </span>
+<span class="c1"># Esse notebook contém todo o código, resultado, análises feitas a partir das perguntas do teste.</span>
+<span class="c1"># O objetivo foi responder corretamente de forma simples e clara e de forma a poder ser lido por quem não programa tambem.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pergunta 1 - Período de data no qual foram recebidas mais doações</span>
@@ -11794,7 +11817,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -11862,10 +11885,25 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># A partir do resultado considero discrepante as 4 ultimas linhas dentre as primeiras, logo seleciono o período das 6 primeiras</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># A partir do resultado considero discrepante as 4 ultimas linhas dentre as primeiras, </span>
+<span class="c1"># logo seleciono o período das 6 primeiras para serem trabalhadas adiante.</span>
+<span class="c1"># Foram os meses: 2014/07, 2014/08, 2014/09, 2014/10, 2014/11, 2014/12.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Plotei o gráfico desse resumo do período com as maiores doações por data e valores:</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Período onde houveram as maiores doações:&quot;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -11918,7 +11956,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pergunta 2 - Partidos que receberam mais doações</span>
@@ -11931,7 +11969,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;/home/matheus/Documents/AFILIO/dbAfilio.db&quot;</span><span class="p">)</span>
@@ -11986,10 +12024,25 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Gráfico do resultado</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Resposta a pergunta foi simples, os partidos são:</span>
+<span class="c1"># PT, PSDB, PMDB, PSB, PSD.</span>
+<span class="c1"># Na ordem decrescente do total de valores recebidos.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Gráfico do resultado representando partido e total dos valores recebidos na ordem de bilhão.</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Partidos que receberam as maiores doações:&quot;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -12043,7 +12096,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pergunta 3 - Filtrar os 10 Candidatos que receberam as maiores doações e medir a audiência no mês de jan/2018</span>
@@ -12056,7 +12109,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Primeiramente filtro os 10 canditados que mais receberam doações</span>
@@ -12118,10 +12171,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pergunta 4 - Quais segmentos de negócio doaram mais e para quais partidos</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Resultado: o nome dos Candidatos que mais receberam doações por ordem decrescente de valores recebidos e</span>
+<span class="c1"># ao lado o valor total sumarizado.</span>
 </pre></div>
 
 </div>
@@ -12131,7 +12185,24 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pergunta 4 - Quais segmentos de negócio doaram mais e para quais partidos</span>
+
+<span class="c1"># Abordei a solução em duas partes.</span>
+<span class="c1"># Primeiramente obtenho os setores que mais doaram.</span>
+<span class="c1"># Na sequência obtenho para quais partidos doaram finalizando a resposta completa.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Primeiro obtenho os segmentos de negócio que mais doaram. Optei por obter os 10 maiores.</span>
@@ -12189,7 +12260,20 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Resultado: Agora tenho o código dos setores que mais doaram e apresentei textualmente seus nomes acima.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Agora eu obtenho os partidos que receberam as doações por setor concluindo a pergunta completa:</span>
@@ -12213,11 +12297,12 @@ div#notebook {
     <span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
     
 <span class="c1"># OBS: Nessa etapa da solução eu criei em desenvolvimento um gráfico onde este ficou extremamente confuso.</span>
-<span class="c1"># A quantidade de dados que ele tinha que representar ficou visualmente ruim ao não caber de forma clara,</span>
+<span class="c1"># A quantidade de dados que ele tinha que representar ficou visualmente ruim ao não caber de forma clara na tela,</span>
 <span class="c1"># ainda que testado diversos tipos de gráfico.</span>
+
 <span class="c1"># Considero melhor exibir os dados do que incluir um gráfico que não adiciona valor a solução somente pode confundir.</span>
-<span class="c1"># Abaixo segue um adicional da mesma solução usando numpy, pandas, e scipy que retornam o resultado de forma a </span>
-<span class="c1"># permitir implmentações diversas a partir dele numéricamente.</span>
+<span class="c1"># Abaixo do texto segue um adicional da mesma solução usando numpy, pandas, e scipy que retornam o resultado de forma a </span>
+<span class="c1"># permitir implmentações diversas a partir deles numéricamente. Considerei nessa sequência o pedido do uso do numpy.</span>
 </pre></div>
 
 </div>
@@ -12491,16 +12576,22 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Continuação da solução:</span>
 <span class="c1"># Como foi indicado o uso do numpy para resolver o problema, como demonstração criarei uma matriz esparsa que</span>
 <span class="c1"># representa os setores no eixo y e os partidos no eixo x, onde marcarei como 1 quando o setor investiu no partido e</span>
-<span class="c1"># quando não tem a relação do setor e partido será nulo e para fins de memória usarei uma matriz esparsa condensada</span>
-<span class="c1"># onde só contém as relações que existem. Essa matriz pode ser usada para inúmeros fins, para citar um, pode-se recomendar</span>
-<span class="c1"># um partido para um setor, ou recomendar um setor para um partido.</span>
-<span class="c1"># Não pretendo implementar as recomendações mas demonstrar a criação da matriz para a finalidade do teste</span>
+<span class="c1"># quando não tem a relação do setor e partido será nulo.</span>
+<span class="c1"># Para fins de uso memória otimizado usarei uma matriz esparsa do scipy condensada,</span>
+<span class="c1"># onde só contém as relações que existem. </span>
+
+<span class="c1"># Essa matriz pode ser usada para inúmeros fins, por exemplo pode-se recomendar</span>
+<span class="c1"># um partido para um setor, ou recomendar um setor para um partido, entre inúmeros problemas que podem usa-la.</span>
+<span class="c1"># Vale acrescentar que a biblioteca scikit-lear utiliza muito como entrada uma matriz esparsa para uso de diversos tipos</span>
+<span class="c1"># de algoritmos de Machine Learning, logo foi válido cria-la para demonstração.</span>
+<span class="c1"># Não pretendo implementar as recomendações que citei de exemplo </span>
+<span class="c1"># mas demonstrar a criação da matriz para a finalidade do teste.</span>
 </pre></div>
 
 </div>
@@ -12510,10 +12601,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[123]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;/home/matheus/Documents/AFILIO/dbAfilio.db&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Primeiramente executo uma querie que me retorna os partidos dos setores que mais efetuaram doações</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;/home/matheus/Documents/AFILIO/dbAfilio.db&quot;</span><span class="p">)</span>
 <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <span class="n">sql</span> <span class="o">=</span> <span class="s2">&quot;select distinct Cod_setor_doador, Sigla_Partido, 1 from dataset&quot;</span> <span class="o">+</span> \
 <span class="s2">&quot; where  Cod_setor_doador is not null and  Cod_setor_doador in &quot;</span> <span class="o">+</span> \
@@ -12522,8 +12615,12 @@ div#notebook {
 
 <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
 
+<span class="c1"># Armazena o resultado da querie em uma lista python</span>
 <span class="n">listacfromdb</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">())</span>
 
+<span class="c1"># Utilização do Pandas para armazenar os dados da lista considerando a qualidade da Biblioteca que lida muito bem</span>
+<span class="c1"># com quantidades grandes de dados otimizando memória e tempo de processamento.</span>
+<span class="c1"># Com o Pandas foi possível executar operações diretamente nas colunas, organizar, adicionar e criar índices.</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">listacfromdb</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Cod_setor_doador&#39;</span><span class="p">,</span> <span class="s1">&#39;Sigla_Partido&#39;</span><span class="p">,</span> <span class="s1">&#39;investiu&#39;</span><span class="p">])</span>
 
 <span class="c1"># Mantém uma cópia dos valores em forma de texto para identificação ser possível,</span>
@@ -12532,7 +12629,9 @@ div#notebook {
 <span class="c1"># É preciso transformar os textos em números para a construção da matriz que não lida com texto.</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;setor_str&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cod_setor_doador&#39;</span><span class="p">]</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;partido_str&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Sigla_Partido&#39;</span><span class="p">]</span>
-<span class="c1"># OBS: Não serão usadas aqui, é somente uma demonstração de como manter o texto original pelos índices numéricos</span>
+<span class="c1"># OBS: Não serão usadas aqui, é somente uma demonstração de como manter o texto original pelos índices numéricos.</span>
+<span class="c1"># Para continuação de um problema onde for preciso exibir os setores e partidos textualmente basta utilizar esse</span>
+<span class="c1"># Dataframe que fica guardado aqui com a relação entre os índices numéricos e o texto original.</span>
 
 <span class="c1"># Transforma o setor e partido de texto para índices numéricos</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cod_setor_doador&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cod_setor_doador&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
@@ -12543,11 +12642,19 @@ div#notebook {
 <span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;setor_str&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">dn</span> <span class="o">=</span> <span class="n">dn</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;partido_str&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Converte os dados do Pandas Dataframe em um numpy array</span>
+<span class="c1"># Converte os dados do Pandas Dataframe em um numpy array.</span>
+<span class="c1"># Nesse passo retorno do Pandas para o Numpy agora com as colunas formatadas como quero em formato numérico para ser</span>
+<span class="c1"># armazenado em numpy.</span>
 <span class="n">rows</span> <span class="o">=</span> <span class="n">dn</span><span class="o">.</span><span class="n">to_records</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">nparray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromiter</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;setor_str&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;partido_str&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;investiu&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)])</span>
 
-<span class="c1"># Cria a matriz esparsa final pronta para ser utilizada em problemas de Machine Learning</span>
+<span class="c1"># Cria a matriz esparsa final pronta para ser utilizada em problemas de Machine Learning.</span>
+<span class="c1"># O Scipy fornecesse esse formato condensado de matriz esparsa permitindo economizar memória e tempo já que os </span>
+<span class="c1"># valores de setore e partido que não existem não são armazenados.</span>
+
+<span class="c1"># Uma matriz esparsa pode ficar extremamente grande exigindo um enorme uso de memória considerando que na maior </span>
+<span class="c1"># parte das vezes a maior parte da matriz é nula e pode ocupar espaço, como dito anteriormente esse problema</span>
+<span class="c1"># não ocorre usando o sparse do scipy.</span>
 <span class="n">sparse_matrix</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">((</span><span class="n">nparray</span><span class="p">[</span><span class="s1">&#39;investiu&#39;</span><span class="p">],</span> <span class="p">(</span><span class="n">nparray</span><span class="p">[</span><span class="s1">&#39;setor_str&#39;</span><span class="p">],</span> <span class="n">nparray</span><span class="p">[</span><span class="s1">&#39;partido_str&#39;</span><span class="p">])))</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Matriz esparsa condensada representativa da relação de setores e partidos com doação:&quot;</span><span class="p">)</span>
@@ -12632,26 +12739,48 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Resultado: Para fins de demonstração exibi parte da matriz onde pode-se ver como ela condensa os dados e armazena.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[125]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Pergunta 5 - </span>
 <span class="c1"># Árvores de decisão que fazem sentido para o problema:</span>
 
+<span class="c1"># A pergunta foi genérica, ou seja, uma árvore de decisão pode ser usada para problemas de regressão ou classificação,</span>
+<span class="c1"># e ainda deve ter uma finalidade. O dataset permite criar árvores com inúmeras soluções para inúmeros problemas.</span>
+<span class="c1"># Partindo do princípio que a idéia é analisar se posso criar uma árvore que resolva um problema eu escolhi um que</span>
+<span class="c1"># considerei relevante para resolver, mas pensei em vários como exemplo abaixo cito alguns:</span>
 <span class="c1"># 1- Em qual Candidato investir?</span>
 <span class="c1"># 2 - Em qual partido investir?</span>
-<span class="c1"># 3- Para qual segmento pedir doações?</span>
+<span class="c1"># 3- Para qual setor pedir doações?</span>
+<span class="c1"># 4 - O quanto devo investir?</span>
 <span class="c1"># ...</span>
 
 <span class="c1"># Para a tarefa em questão foi pedida uma árvore de decisão a partir dos dados</span>
 <span class="c1"># Por escolha de uma árvore que se mostra mais importante baseado em uma suposição de útilidade optei por uma árvore</span>
 <span class="c1"># de classificação para responder a uma pergunta.</span>
+
 <span class="c1"># Irei implementar uma árvore que dados atributos do dataset escolha um partido para efetuar doação.</span>
 <span class="c1"># Nesse caso também irei filtrar os atributos que podem influenciar nessa decisão,</span>
 <span class="c1"># excluindo certos atributos que considero não ajudar ou ainda invalidar o Modelo.</span>
 
 <span class="c1"># Primeiro passo: Obter os atributos necessários e o target separando os dois em conjuntos de dados diferentes.</span>
-<span class="c1"># Considero importante os dados que não indicam candidato pois senão o partido já está considerado, seria um erro.</span>
+<span class="c1"># Considero importante os dados que não indicam candidato pois senão o partido já está considerado,</span>
+<span class="c1"># seria um erro de Modelo pois se eu incluir o candidato ele está atrelado a um partido necessariamente, invalidando a </span>
+<span class="c1"># construção e resultado da árvore.</span>
+
 <span class="c1"># Considero a eleição, prestador de contas, doador, setor do doador e o valor que ele quer investir.</span>
 <span class="c1"># Com esses atributos minha intuição é que sejam o suficiente para sugerir um partido para doar.</span>
 </pre></div>
@@ -12663,10 +12792,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Treino do Modelo:</span>
+
+<span class="c1"># Primeiramente efetuo uma querie para retornar somente os atributos que considero importantes.</span>
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;/home/matheus/Documents/AFILIO/dbAfilio.db&quot;</span><span class="p">)</span>
 <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <span class="n">sql</span> <span class="o">=</span> <span class="s1">&#39;select &quot;Sigla_Partido&quot;, &quot;Cï¿½d. Eleiï¿½ï¿½o&quot;, &quot;CNPJ Prestador Conta&quot;, &quot;CPF/CNPJ do doador&quot;, &quot;Cod_setor_doador&quot;, Valor_receita from dataset where &quot;CPF/CNPJ do doador&quot; is not null and &quot;CNPJ Prestador Conta&quot; is not null and Valor_receita is not null and &quot;Cod_setor_doador&quot; is not null&#39;</span>
@@ -12677,14 +12808,22 @@ div#notebook {
 <span class="n">vec_atributos</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">vec_target</span> <span class="o">=</span> <span class="p">[]</span>
 
+<span class="c1"># Armazena separadamente em dois vetores os atributos para o treino e o target para cada um para poder criar o Modelo.</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
     <span class="n">vec_target</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">atributos</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]]</span>
     <span class="n">vec_atributos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atributos</span><span class="p">)</span>
-    
-<span class="c1"># o classificador encontra padrões nos dados de treinamento</span>
+
+<span class="c1"># Esse é o momento de criação da árvore e em sequência o treinamento do Modelo completo.</span>
+<span class="c1"># O classificador encontra padrões nos dados no treinamento em formato de árvore de decisão considerando cada</span>
+<span class="c1"># atributo para definir um caminho de decisão onde o valor passado influência na criação do caminho e resultado.</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span> <span class="c1"># instância do classificador</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">vec_atributos</span><span class="p">,</span> <span class="n">vec_target</span><span class="p">)</span> <span class="c1"># fit encontra padrões nos dados</span>
+
+<span class="c1"># O scikit-learn oferece uma biblioteca de excelência para criação de árvores, basta informar os dados do treino</span>
+<span class="c1"># e seus resultados separadamente que ele encontra uma árvore que resolva o problema. </span>
+<span class="c1"># Optei usar a biblioteca pois sei que sua implementação é ótima, seria perda de tempo implementar o algoritmo a cada</span>
+<span class="c1"># passo complexo podendo utilizar esse recurso.</span>
 </pre></div>
 
 </div>
@@ -12694,13 +12833,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[127]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Predição:</span>
 <span class="c1"># Somente para conferir se o Modelo foi bem construído, testei um exemplo do dataset e como resultado ele acertou o partido</span>
 <span class="c1"># Concluo então que a árvore parece estar funcionando adequadamente.</span>
 
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Resultado deve ser o PSDB observando os dados.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Predição a partir do Modelo utilizando o primeiro exemplo do dataset: &quot;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">143</span><span class="p">,</span> <span class="mi">20578194000114</span><span class="p">,</span> <span class="mf">1256007000131.0</span><span class="p">,</span> <span class="mf">4511101.0</span><span class="p">,</span> <span class="mf">145000.0</span><span class="p">]]))</span>
@@ -12723,7 +12864,9 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Predição a partir do Modelo utilizando o primeiro exemplo do dataset: 
+<pre>Resultado deve ser o PSDB observando os dados.
+
+Predição a partir do Modelo utilizando o primeiro exemplo do dataset: 
 
 [u&#39;PSDB&#39;]
 </pre>
@@ -12736,13 +12879,16 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[128]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Conclusão: O exercício foi executado como pedido quase completamente.</span>
 <span class="c1"># Ficou faltando a medição de audiência dos candidatos usando o scrapy pois não tenho experiência com ele </span>
 <span class="c1"># e não daria tempo de estudar e implementar de forma a garantir seu resultado. </span>
+<span class="c1"># Tenho experiência com scraping, utilizando o requests, BeatifulSoup e um header para parecer humano, essa é uma forma</span>
+<span class="c1"># que sei que funciona muito bem para scraping, a novidade para mim foi a exigência da utilização do srapy.</span>
 <span class="c1"># Isso não impede que eu aprenda o scrapy futuramente, foi por questão de tempo para executar o teste que optei não arriscar.</span>
+
 <span class="c1"># Explicado cada passo contendo o código, o resultado e minhas observações.</span>
 <span class="c1"># Espero que eu tenha entendido completamente todos os requisitos e implementado de uma forma clara.</span>
 <span class="c1"># Qualquer dúvida estou a disposição para responder.</span>

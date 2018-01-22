@@ -11781,10 +11781,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[277]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Importação das Bibliotecas</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Importação das Bibliotecas utilizadas para a Análise</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[278]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">rawds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/matheus/Documents/AFILIO/receitas_candidatos_2014_brasil.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;ISO-8859-1&quot;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">na_values</span> <span class="o">=</span> <span class="s1">&#39;#NULO&#39;</span><span class="p">)</span>
@@ -11835,7 +11835,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[278]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -12136,7 +12136,27 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[279]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Essa exibição das 10 primeiras linhas do dataset considero como o primeiro passo.</span>
+<span class="c1"># Nela posso ver quais e como estão distribuidos os dados que terei a disosição para resolver o teste.</span>
+<span class="c1"># Já se pode concluir algumas coisas a partir disso:</span>
+<span class="c1"># Quais valores importantes tenho que serão sufcientes para responder as perguntas.</span>
+<span class="c1"># A existência de colunas que possívelmente não serão necessárias</span>
+<span class="c1"># A existência de dados nulos em algumas colunas</span>
+<span class="c1"># Que apesar de se tratar das eleições de 2014 as doações esstão distribuídas em outros anos também como 2016.</span>
+<span class="c1"># O formato dos dados que estão armazenados.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Executa a primeira inspeção para apresentar as colunas do documento</span>
@@ -12209,7 +12229,24 @@ memory usage: 104.4+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[280]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Esse passo serviu para mostrar informações sobre as colunas</span>
+<span class="c1"># São 427489 linhas no dataset</span>
+<span class="c1"># São 32 colunas</span>
+<span class="c1"># Existe variação na quantidade de linhas para algumas colunas</span>
+<span class="c1"># O Tipo de dados que cada coluna me apresenta.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Calcula métricas sobre cada coluna para entender os valores contidos</span>
@@ -12226,7 +12263,7 @@ memory usage: 104.4+ MB
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[280]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12379,7 +12416,39 @@ memory usage: 104.4+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[281]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Esse é um sumário quantitativo e estatístico dos dados</span>
+<span class="c1"># Pode-se observar a média, o mínimo, o máximo o padrão e algumas subdivisões percentuiais</span>
+<span class="c1"># Pode-se ver já que o código de eleição não varia, então estarei tratando da mesma eleição.</span>
+<span class="c1"># Pode-se validar que não existem valores negaativos que poderiam estar errados.</span>
+<span class="c1"># É uma base condensada dos dados que demonstra valores difíceis de ver nos dados puros do arquivo.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Irei acrescentar logo abaixo 3 colunas para facilitar as consultas aos dados</span>
+<span class="c1"># A data no formato original está em um formato complicado de trabalhar então supri essa necessidade criando</span>
+<span class="c1"># as colunas dia, mes e ano que permitirão responder questões que precisam usar a Data.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">rawds</span><span class="p">[</span><span class="s1">&#39;dia&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rawds</span><span class="p">[</span><span class="s2">&quot;Data da receita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -12394,7 +12463,20 @@ memory usage: 104.4+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[282]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Abaixo uma simples substituição de &#39;,&#39; para &#39;.&#39; nos valores para tratar os dados no formato adequado</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">rawds</span><span class="p">[</span><span class="s2">&quot;Valor receita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rawds</span><span class="p">[</span><span class="s2">&quot;Valor receita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
@@ -12407,20 +12489,32 @@ memory usage: 104.4+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[288]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Cria um banco de dados sqlite para facilitar as consultas já com os dados tratados</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Cria um banco de dados sqlite para facilitar as consultas já com os dados tratados.</span>
+<span class="c1"># Atenção a observação feita ao final do documento.</span>
+<span class="c1"># Esse comando cria um Banco de Dados Sqlite com uma tabela (dataset) a partir do arquivo csv.</span>
+<span class="c1"># Se o banco já existir ele apaga e cria um novo.</span>
 
 <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;/home/matheus/Documents/AFILIO/dbAfilio.db&quot;</span><span class="p">)</span>
 <span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
 <span class="n">rawds</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
-<span class="c1">#OBS: modifiquei alguns nomes de coluna no Banco diretamente para a próxima etapa, </span>
+<span class="c1">#OBS: modifiquei alguns nomes de coluna do Banco para funcionarem na próxima etapa corretamente, </span>
 <span class="c1"># o Banco gerado aqui não irá funcionar 100% na etapa Respostas se não forem modificadas as colunas.</span>
-<span class="c1"># Basta visualizar o arquivo Perguntas e verificar pelas consultas os nomes que foram alterados,</span>
-<span class="c1"># efetuando a alteração dos nomes é possível reproduzir o arquivo Respostas.</span>
+<span class="c1"># É necessário modificar os nomes das colunas ou no csv antes de criar o banco acima, ou modificar no Banco as tabelas.</span>
+<span class="c1"># As colunas modificadas seguem abaixo:</span>
+<span class="c1"># - Valor receita para Valor_receita</span>
+<span class="c1"># - Sigla Partido para Sigla_Partido</span>
+<span class="c1"># - Nome candidato para Nome_candidato</span>
+<span class="c1"># - Cod setor econï¿½mico do doador para Cod_setor_doador</span>
+<span class="c1"># - Setor econï¿½mico do doador para Setor_doador_str</span>
+
+<span class="c1"># A partir da renomeação das colunas o Notebook Respostas funciona corretamente.</span>
+<span class="c1"># Acabada a parte de Análise e tratamento do dataset o próximo passo é responder as perguntas do exercício,</span>
+<span class="c1"># abra na sequência o Notebook Respostas.</span>
 </pre></div>
 
 </div>
